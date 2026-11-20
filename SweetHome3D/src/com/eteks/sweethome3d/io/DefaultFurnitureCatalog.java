@@ -165,6 +165,10 @@ public class DefaultFurnitureCatalog extends FurnitureCatalog {
      * If the value of this key is <code>true</code>, the piece of furniture
      * will be considered as a movable piece. 
      */
+    VOLUME("volume"),
+    /**
+     * The key for the volume in cubic centimeter of a piece of furniture (mandatory).
+     */
     MOVABLE("movable"),
     /**
      * The key for the door or window type of a piece of furniture (mandatory).
