@@ -598,26 +598,14 @@ public class HomePieceOfFurniture extends HomeObject implements PieceOfFurniture
   /**
    * Returns the volume of this piece of furniture.
    */
-  public float getVolume() {return this.volume;}
+  public float getVolume() {return getWidth() * getDepth() * getHeight();
+  }
 
   /**
    * Sets the volume of this piece of furniture. Once this piece is updated,
    * listeners added to this piece will receive a change notification.
    * @throws IllegalStateException if this piece of furniture isn't resizable
    */
-  public void setVolume(float width, float depth, float height) {
-    if (isResizable()) {
-      float volume = width * depth * height;
-      if (volume != this.volume) {
-        float oldVolume = this.volume;
-        this.volume = volume;
-        this.shapeCache = null;
-        this.propertyChangeSupport.firePropertyChange(Property.VOLUME.name(), oldVolume, volume);
-      }
-    } else {
-      throw new IllegalStateException("Piece isn't resizable");
-    }
-  }
 
 
   /**

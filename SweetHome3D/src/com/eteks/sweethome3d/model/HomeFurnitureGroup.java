@@ -220,9 +220,6 @@ public class HomeFurnitureGroup extends HomePieceOfFurniture {
       super.setWidth((float)unrotatedBoundingRectangle.getWidth());
       super.setDepth((float)unrotatedBoundingRectangle.getHeight());
       super.setHeight(height);
-      super.setVolume((float) unrotatedBoundingRectangle.getWidth(),
-              (float) unrotatedBoundingRectangle.getHeight(),
-              height);
     } else {
       this.fixedWidth = (float)unrotatedBoundingRectangle.getWidth();
       this.fixedDepth = (float)unrotatedBoundingRectangle.getHeight();
